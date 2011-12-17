@@ -37,6 +37,10 @@ post '/update_settings' do
   redirect '/settings'
 end
 
+get '/license' do
+  erb :license
+end
+
 class Dfile
   def self.load(file)
    d = YAML.load_file("#{File.dirname(__FILE__)}/data/#{file}.yml")
