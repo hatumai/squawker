@@ -1,0 +1,15 @@
+<h1>Add or schedule a new squawk</h1>
+<br />
+<form method="post" action="/save">
+  <input type="text" maxlength="140" name="message" id="message" class="squawk">
+  <br /><br />
+  <select name="type" class="squawk">
+    <option value="scheduled">add to queue</option>
+    <option value="fill">add to filler</option>
+  </select>
+  <br /><br />
+  <input type="submit" value="save" class="button">
+</form>
+<script type="text/javascript">
+  document.getElementById('message').focus();
+</script>

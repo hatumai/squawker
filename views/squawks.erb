@@ -1,0 +1,19 @@
+<h1>Squawks</h1>
+
+<h2>Scheduled</h2>
+<% @scheduled = {"Results" => "No Records"} if @scheduled.nil?; @scheduled.each do |k, v| %>
+    <%= k%>: <%= v%><br />
+
+<% end %>
+
+<h2>Fill</h2>
+<% @fill = {"Results" => "No Records"} if @fill.nil?; @fill.each do |k, v| %>
+    <%= k%>: <%= v%><br />
+
+<% end %>
+
+<h2>Completed</h2>
+<% @completed = {"Results" => "No Records"} if @completed.nil?; @completed.each do |k, v| %>
+    <%= k%>: <%= v%><br />
+
+<% end %>

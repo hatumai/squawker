@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>squawker (&lt;</title>
+    <style type="text/css">
+body{
+    background-color:#696969;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    color: #aaa;
+}
+label{
+   display: inline-block;
+    width: 170px;
+}
+a:link{
+    text-decoration: none;
+    color: #CCE1FF;
+}
+a:visited{
+    color: #CCE1FF;
+}
+a:hover{
+    color: #aaa;
+}
+a:active{
+    color: #CCE1FF;
+}
+.menu_item{
+    display: inline;
+}
+.menu_item > a{
+    border: 1px solid #999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px;
+}
+.menu_item > a:hover{
+    border-color: #CCE1FF;
+}
+.logo{
+    display: inline;
+}
+.logo > a{
+    font-size: 24px;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    height: 20px;
+}
+#content{
+    width: 350px;
+    border: 1px solid #999;
+    margin: 5px;
+    padding: 10px;
+    background-color: #606060;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    text-align: justify;
+}
+#layout{
+    margin: auto;
+    margin-top: 200px;
+    width: 400px;
+    height: auto;
+}
+.squawk{
+    width: 350px;
+    padding: 10px;
+    border: none;
+    color: #333;
+    height: 30px;
+}
+.button{
+    width: auto;
+    padding: 10px;
+    border: none;
+    color: #333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.button:hover{
+    background-color: #EFEFEF;
+}
+.auto{
+    width: auto;
+}
+#footer{
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 7px;
+    font-family: Verdana, sans-serif;
+    color: #444;
+}
+h1{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+h2{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-bottom: 1px dotted;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+            .right{float: right;}
+    </style>
+  </head>
+  <body id="layout">
+  <div>
+    <li class="logo"><a href="/">(&lt;</a></li>
+    <li class="menu_item"><a href="/squawks">Squawks</a></li>
+    <li class="menu_item"><a href="/add">Add Squawks</a></li>
+    <li class="menu_item"><a href="/settings">Settings</a></li>
+    <br /><br />
+    <div id="content">
+    <%= yield %>
+    </div>
+    <div id="footer">
+      squawker (&lt;  <span class="right">info : license : &copy;2011</span>
+    </div>
+  </div>
+  </body>
+</html>

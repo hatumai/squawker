@@ -1,0 +1,42 @@
+<form action="/update_settings" method="post">
+<h1>Settings</h1>
+<label>squawk every</label>
+<select name="count" class="squawk auto">
+  <% (1..25).each do |count| %>
+  <option <%= "selected" if @settings['count']==count.to_s %> ><%= count%></option>
+  <% end %>
+</select>
+
+<select name="unit" class="squawk auto">
+  <% ['hours', 'minutes', 'seconds'].each do |unit| %>
+  <option <%= "selected" if @settings['unit']==unit.to_s %> ><%= unit%></option>
+  <% end %>
+</select>
+
+<br /><br />
+
+<label>fill mode</label>
+
+<select name="fill_mode" class="squawk auto">
+  <option <%= "selected" if @settings['fill_mode']=="always add fill" %> >always add fill</option>
+  <option <%= "selected" if @settings['fill_mode']=="when queue is empty" %> >when queue is empty</option>
+  <option <%= "selected" if @settings['fill_mode']=="never add fill" %> >never add fill</option>
+</select>
+
+<br /><br />
+
+<label>add fill every</label>
+<select name="fill_count" class="squawk auto">
+  <% (1..25).each do |count| %>
+  <option <%= "selected" if @settings['fill_count']==count.to_s %> ><%= count%></option>
+  <% end %>
+</select>
+
+<select name="fill_unit" class="squawk auto">
+  <% ['hours', 'minutes', 'seconds'].each do |unit| %>
+  <option <%= "selected" if @settings['fill_unit']==unit.to_s %> ><%= unit%></option>
+  <% end %>
+</select>
+  <br /><br />
+  <input type="submit" value="save" class="button">
+</form>
