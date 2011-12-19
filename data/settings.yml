@@ -1,5 +1,5 @@
 --- 
-count: "15"
+count: "5"
 unit: hours
 fill_mode: when queue is empty
 fill_count: "8"
