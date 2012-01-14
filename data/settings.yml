@@ -1,6 +1,6 @@
 --- 
-count: "5"
-unit: hours
-fill_mode: when queue is empty
+count: "1"
+unit: minutes
+fill_mode: never
 fill_count: "8"
 fill_unit: hours

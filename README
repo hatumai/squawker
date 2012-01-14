@@ -1,1 +1,24 @@
 Squawker (<
+
+WTF
+--------------------------------------------------------------------
+Squawker fills a serious need among the socially inept, how to
+belong to the tweetosphere while maintaining my social isolation.
+
+Squawker could also be useful for some other commercial stuff, 
+that is why it is licensed under the Creative Commons -  
+Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+
+If you want to use this for NonCommercial use, go for it.  For
+Commercial use, you have to contact me to get proper licensing.
+
+Nothing is more awesome that automating your social interaction.
+
+
+Get Going
+---------------------------------------------------------------------
+The goal is for this application to be as self contained as
+possible.  Sinatra, Twitter and YAML are required.
+
+I have tested it with Ruby 1.9.2, but it may well work with
+other versions.

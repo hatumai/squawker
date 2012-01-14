@@ -1,19 +1,14 @@
 <h1>Squawks</h1>
+<% @squawks = { :queued => @queued, :fill => @fill, :completed => @completed } %>
+<% @squawks.each_pair do |key, listings| %>
 
-<h2>Scheduled</h2>
-<% @scheduled = {"Results" => "No Records"} if @scheduled.nil?; @scheduled.each do |k, v| %>
-    <%= k%>: <%= v%><br />
+<h2><%= key.to_s %></h2>
 
-<% end %>
+    <%if listings.is_a? Hash%>
+        <% listings.each do |k, v| %>
+            <p class="clear"><div class="listing_number left"><%= k%>:</div> <div class="listing right"><%= v%></div></p>
+        <% end %>
+        <br />
+    <% end %>
 
-<h2>Fill</h2>
-<% @fill = {"Results" => "No Records"} if @fill.nil?; @fill.each do |k, v| %>
-    <%= k%>: <%= v%><br />
-
-<% end %>
-
-<h2>Completed</h2>
-<% @completed = {"Results" => "No Records"} if @completed.nil?; @completed.each do |k, v| %>
-    <%= k%>: <%= v%><br />
-
-<% end %>
+<%end%>

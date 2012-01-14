@@ -18,9 +18,9 @@
 <label>fill mode</label>
 
 <select name="fill_mode" class="squawk auto">
-  <option <%= "selected" if @settings['fill_mode']=="always add fill" %> >always add fill</option>
-  <option <%= "selected" if @settings['fill_mode']=="when queue is empty" %> >when queue is empty</option>
-  <option <%= "selected" if @settings['fill_mode']=="never add fill" %> >never add fill</option>
+  <option value="always" <%= "selected" if @settings['fill_mode']=="always" %> >always add fill</option>
+  <option value="empty" <%= "selected" if @settings['fill_mode']=="empty" %> >when queue is empty</option>
+  <option value="never" <%= "selected" if @settings['fill_mode']=="never" %> >never add fill</option>
 </select>
 
 <br /><br />
@@ -37,6 +37,20 @@
   <option <%= "selected" if @settings['fill_unit']==unit.to_s %> ><%= unit%></option>
   <% end %>
 </select>
-  <br /><br />
-  <input type="submit" value="save" class="button">
+<br />
+<br />
+<h2>Twitter Account Settings</h2>
+<label>Consumer Key</label>
+<input type="text" name="consumer_key" class="squawk" value="<%= @settings['consumer_key'] %>">
+
+<label>Consumer Secret</label>
+<input type="password" name="consumer_secret" class="squawk" value="<%= @settings['consumer_secret'] %>">
+
+<label>Oauth Token</label>
+<input type="text" name="oauth_token" class="squawk" value="<%= @settings['oauth_token'] %>">
+
+<label>Oauth Token Secret</label>
+<input type="password" name="oauth_token_secret" class="squawk" value="<%= @settings['oauth_token_secret'] %>">
+<br /><br />
+<input type="submit" value="save" class="button">
 </form>
