@@ -101,6 +101,20 @@ class Squawk
 
 end
 
+class Squawk
+  require 'twitter'
+
+  def self.tweet
+  Twitter.configure do |config|
+
+  end
+
+  Twitter.update("cold!")
+  end
+
+
+end
+
 class Dfile
   def self.load(file)
    d = YAML.load_file("#{File.dirname(__FILE__)}/data/#{file}.yml")
